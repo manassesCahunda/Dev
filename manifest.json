@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "onekey",
+    "version": "1.0",
+    "description": "Todos os sistemas são abertos",
+    "icons": {
+        "16": "logo.png"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "find-password.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
